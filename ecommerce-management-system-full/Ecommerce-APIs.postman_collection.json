@@ -47,6 +47,16 @@
               "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"
             }
           }
+        },
+        {
+          "name": "Delete User (Admin)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/auth/delete/1", "host": ["{{baseUrl}}"], "path": ["auth","delete","1"] }
+          }
         }
       ]
     },
@@ -105,6 +115,16 @@
               { "key": "Authorization", "value": "Bearer {{token}}" }
             ],
             "url": { "raw": "{{baseUrl}}/products/1", "host": ["{{baseUrl}}"], "path": ["products","1"] }
+          }
+        },
+        {
+          "name": "Activate Product (Admin)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/products/2/activate", "host": ["{{baseUrl}}"], "path": ["products","2","activate"] }
           }
         }
       ]
